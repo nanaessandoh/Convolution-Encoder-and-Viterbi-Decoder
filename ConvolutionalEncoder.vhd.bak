@@ -8,7 +8,7 @@ entity CEncoder is
          );
 end CEncoder;       
 
-architecture behav of CEncoder is 
+architecture CEncoder_behav of CEncoder is 
    
 component DFlipFlop is
    port( 
@@ -36,7 +36,7 @@ begin
 output(1)<= input xor DF1_out xor DF2_out;
 output(0)<= input xor DF2_out;
 
-end behav;
+end CEncoder_behav;
 
 
          

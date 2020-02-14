@@ -1,0 +1,212 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/Users/Nana Essandoh/iCloudDrive/MUN/Project/Project Codes/LDPC
+Ecencoder
+Z0 w1581651052
+Z1 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z2 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z3 dC:/Users/Nana Essandoh/iCloudDrive/MUN/Project/Project Codes/Convolutional Codes
+Z4 8C:/Users/Nana Essandoh/iCloudDrive/MUN/Project/Project Codes/Convolutional Codes/ConvolutionalEncoder.vhd
+Z5 FC:/Users/Nana Essandoh/iCloudDrive/MUN/Project/Project Codes/Convolutional Codes/ConvolutionalEncoder.vhd
+l0
+L4
+VOQ_3V^VCEHEOXcVOJ0D=E2
+!s100 <;;21Y<W2`K515ji>g>380
+Z6 OV;C;10.5b;63
+32
+Z7 !s110 1581651137
+!i10b 1
+Z8 !s108 1581651137.000000
+Z9 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Nana Essandoh/iCloudDrive/MUN/Project/Project Codes/Convolutional Codes/ConvolutionalEncoder.vhd|
+Z10 !s107 C:/Users/Nana Essandoh/iCloudDrive/MUN/Project/Project Codes/Convolutional Codes/ConvolutionalEncoder.vhd|
+!i113 1
+Z11 o-work work -2002 -explicit
+Z12 tExplicit 1 CvgOpt 0
+Abehav
+R1
+R2
+Z13 DEx4 work 8 cencoder 0 22 OQ_3V^VCEHEOXcVOJ0D=E2
+l25
+L11
+VCmKU[URH8Y03b<0>Pi1:j1
+!s100 IeY;JAK]Wh];SbNk3Pl1b2
+R6
+32
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Acencoder_behav
+R1
+R2
+R13
+l25
+L11
+V^1kJ`KV5MPV:fUekG7`^n3
+!s100 PQINV4aRQlObf=fK?Aamj2
+R6
+32
+!s110 1581650750
+!i10b 1
+!s108 1581650750.000000
+R9
+R10
+!i113 1
+R11
+R12
+w1581650746
+Edflipflop
+Z14 w1581649135
+R1
+R2
+R3
+Z15 8C:/Users/Nana Essandoh/iCloudDrive/MUN/Project/Project Codes/Convolutional Codes/DFlipFLop.vhd
+Z16 FC:/Users/Nana Essandoh/iCloudDrive/MUN/Project/Project Codes/Convolutional Codes/DFlipFLop.vhd
+l0
+L5
+VkDaj^7N66i>Yaj5kNhA392
+!s100 bhEILen2lK274O1kA]zU]1
+R6
+32
+R7
+!i10b 1
+R8
+Z17 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Nana Essandoh/iCloudDrive/MUN/Project/Project Codes/Convolutional Codes/DFlipFLop.vhd|
+Z18 !s107 C:/Users/Nana Essandoh/iCloudDrive/MUN/Project/Project Codes/Convolutional Codes/DFlipFLop.vhd|
+!i113 1
+R11
+R12
+Abehav
+R1
+R2
+Z19 DEx4 work 9 dflipflop 0 22 kDaj^7N66i>Yaj5kNhA392
+l14
+L13
+Z20 V9m;YB>i3mBQ^P0ho0be]91
+Z21 !s100 379U0@dB1L:2eYfXJc`a^3
+R6
+32
+R7
+!i10b 1
+R8
+R17
+R18
+!i113 1
+R11
+R12
+Adff_behav
+R1
+R2
+DEx4 work 9 dflipflop 0 22 5LUU`5Gc62K:0konK^R5H1
+l13
+L12
+V^DdT6HkaniUIR;;;aIMkd1
+!s100 HAhWc6WLfG?EnYR=Uel>f0
+R6
+32
+!s110 1581648634
+!i10b 1
+!s108 1581648634.000000
+R9
+R10
+!i113 1
+R11
+R12
+R5
+Z22 w1426532928
+R4
+Etestbench
+R22
+R1
+R2
+R3
+Z23 8C:/Users/Nana Essandoh/iCloudDrive/MUN/Project/Project Codes/Convolutional Codes/TestBench.vhd
+Z24 FC:/Users/Nana Essandoh/iCloudDrive/MUN/Project/Project Codes/Convolutional Codes/TestBench.vhd
+l0
+L8
+VO;4H;DY@>z:EM66o9GiJj1
+!s100 YW_Dzl[=bb6jBda6Da^8N3
+R6
+32
+R7
+!i10b 1
+R8
+Z25 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Nana Essandoh/iCloudDrive/MUN/Project/Project Codes/Convolutional Codes/TestBench.vhd|
+Z26 !s107 C:/Users/Nana Essandoh/iCloudDrive/MUN/Project/Project Codes/Convolutional Codes/TestBench.vhd|
+!i113 1
+R11
+R12
+Atestbench_behav
+R1
+R2
+DEx4 work 9 testbench 0 22 O;4H;DY@>z:EM66o9GiJj1
+l34
+L15
+V:6V;JQdkEYBDn<GTHgeRR3
+!s100 ME3d=<@?ABU?YmI<;^oVT1
+R6
+32
+R7
+!i10b 1
+R8
+R25
+R26
+!i113 1
+R11
+R12
+Eviterbidecoder
+Z27 w1581651135
+Z28 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+Z29 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
+Z30 DPx4 ieee 16 std_logic_signed 0 22 C<aanc0R`<LWPSe[JYRP^3
+R1
+R2
+R3
+Z31 8C:/Users/Nana Essandoh/iCloudDrive/MUN/Project/Project Codes/Convolutional Codes/ViterbiDecoder.vhd
+Z32 FC:/Users/Nana Essandoh/iCloudDrive/MUN/Project/Project Codes/Convolutional Codes/ViterbiDecoder.vhd
+l0
+L6
+VzTB]dJkFH`RTHFf`2?EI10
+!s100 F67o=Hj8;M9X1Kf5BFOod0
+R6
+32
+R7
+!i10b 1
+R8
+Z33 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Nana Essandoh/iCloudDrive/MUN/Project/Project Codes/Convolutional Codes/ViterbiDecoder.vhd|
+Z34 !s107 C:/Users/Nana Essandoh/iCloudDrive/MUN/Project/Project Codes/Convolutional Codes/ViterbiDecoder.vhd|
+!i113 1
+R11
+R12
+Aviterbidecoder_behav
+R28
+R29
+R30
+R1
+R2
+DEx4 work 14 viterbidecoder 0 22 zTB]dJkFH`RTHFf`2?EI10
+l81
+L12
+VzToek4Ug?<_=nYN?7FjX12
+!s100 Ili19ZaTo0KH<>UZEV64A2
+R6
+32
+R7
+!i10b 1
+R8
+R33
+R34
+!i113 1
+R11
+R12
