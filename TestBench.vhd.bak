@@ -33,14 +33,10 @@ end component;
 
 begin
     
-    CE1:CEncoder port map( 	input => input,
-				clk => clk,
-				output => CE1_Out
-			);
+    CE1:CEncoder
+    port map(input,clk,CE1_Out);
         
-    CE2:ViterbiDecoder port map(	input => CE1_Out,
-					clk => clk,
-					output => VD1_Out
-			);
+    CE2:ViterbiDecoder
+    port map(CE1_Out,clk,VD1_Out);
     
 end TestBench_behav;

@@ -17,14 +17,6 @@ Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  
 -- Compiling entity ViterbiDecoder
 -- Compiling architecture ViterbiDecoder_behav of ViterbiDecoder
 
-} {} {}} {C:/Users/Nana Essandoh/iCloudDrive/MUN/Project/Project Codes/Convolutional Codes/TestBench.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/Nana Essandoh/iCloudDrive/MUN/Project/Project Codes/Convolutional Codes/TestBench.vhd}
-Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Compiling entity TestBench
--- Compiling architecture TestBench_behav of TestBench
-
 } {} {}} {C:/Users/Nana Essandoh/iCloudDrive/MUN/Project/Project Codes/Convolutional Codes/DFlipFLop.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/Nana Essandoh/iCloudDrive/MUN/Project/Project Codes/Convolutional Codes/DFlipFLop.vhd}
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
 -- Loading package STANDARD
