@@ -1,23 +1,34 @@
+LIBRARY IEEE;
+USE IEEE.std_logic_1164.ALL;
+USE IEEE.std_logic_arith.ALL;
+USE IEEE.std_logic_unsigned.ALL;
+USE IEEE.numeric_std.ALL;
+USE IEEE.math_real.all;
 
-library ieee;
-use ieee.std_logic_1164.all;
+ENTITY DFlipFlop IS
+   PORT( 
+	-- Clock and Reset
+	clk : IN std_logic;
+	rstb : IN std_logic;
 
-entity DFlipFlop is
-   port( 
-	clk: in std_logic;
+	-- Interface I/O
 	 D : IN std_logic;
          Q : OUT std_logic
 );
-end DFlipFlop;
+END DFlipFlop;
 
-architecture behav of DFlipFlop is
-   begin
-      process(clk) --We only care about Clk
-         begin
-            if (clk'event) and (clk='1') then -- Positive Edge
-               Q <= D;
-            end if;
-      end process;
+ARCHITECTURE behav OF DFlipFlop IS
+	
+	BEGIN
+		PROCESS(clk,rstb) 
+         
+		BEGIN
+		IF ( rstb /= '1') THEN
+		Q <= 'U';
+		ELSIF (clk'event) and (clk='1') THEN -- Positive Edge
+		Q <= D;
+            	END IF;
+	END PROCESS;
       
-end behav;
+END behav;
 

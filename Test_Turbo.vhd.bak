@@ -7,7 +7,7 @@ entity Test_Turbo is
          clk : in std_logic;
          output :out std_logic
          );
-end TestTurbo;   
+end Test_Turbo;   
 
 architecture behav of Test_Turbo is 
 

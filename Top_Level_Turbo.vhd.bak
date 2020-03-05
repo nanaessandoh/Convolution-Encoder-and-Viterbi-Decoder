@@ -1,18 +1,15 @@
--------------------------------------- 
--- Testbench
---------------------------------------
 library ieee;
 use ieee.std_logic_1164.all;
 
 
-entity TestBench is
+entity Turbo is
     port(input : in std_logic;
          clk : in std_logic;
          output :out std_logic
          );
-end TestBench;   
+end Turbo;   
 
-architecture TestBench_behav of TestBench is 
+architecture behav of Turbo is 
 
 signal CE1_Out:std_logic_vector(1 downto 0);
 signal VD1_Out:bit;
@@ -43,4 +40,4 @@ begin
 					output => VD1_Out
 			);
     
-end TestBench_behav;
+end behav;
