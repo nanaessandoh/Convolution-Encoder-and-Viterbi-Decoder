@@ -86,48 +86,34 @@ BEGIN
 	BEGIN
 
 	
-	WAIT FOR 5 ns;
+	WAIT FOR 10 ns;
 
 	input_i	<= '1';
-        WAIT FOR 5 ns;
+        WAIT FOR 10 ns;
 	input_i	<= '0';
-	
-	WAIT FOR 5 ns;
-
-
-	input_i	<= '0';
-        WAIT FOR 5 ns;
-	input_i	<= '0';
-	
-	WAIT FOR 5 ns;
-
+	WAIT FOR 10 ns;
 	input_i	<= '1';
-        WAIT FOR 5 ns;
+        WAIT FOR 10 ns;
 	input_i	<= '0';
-	
-	WAIT FOR 5 ns;
-
-	input_i	<= '0';
-        WAIT FOR 5 ns;
-	input_i	<= '0';
-	
-	WAIT FOR 5 ns;
-
-
+	WAIT FOR 10 ns;
 	input_i	<= '1';
-        WAIT FOR 5 ns;
+        WAIT FOR 10 ns;
+	input_i	<= '1';
+	WAIT FOR 10 ns;
 	input_i	<= '0';
-	
-	WAIT FOR 5 ns;
-
-
+        WAIT FOR 10 ns;
 	input_i	<= '0';
-        WAIT FOR 5 ns;
+	WAIT FOR 10 ns;
+	input_i	<= '1';
+        WAIT FOR 10 ns;
+	input_i	<= '1';
+	WAIT FOR 10 ns;
 	input_i	<= '0';
-	
-	WAIT FOR 5 ns;
+        WAIT FOR 10 ns;
 	input_i	<= 'U';
-
+	WAIT FOR 10 ns;
+	input_i	<= 'U';
+	WAIT FOR 50 ns;
 	
 
 
