@@ -1,43 +1,138 @@
-library ieee;
-use ieee.std_logic_1164.all;
+LIBRARY IEEE;
+USE IEEE.std_logic_1164.ALL;
+USE IEEE.std_logic_arith.ALL;
+USE IEEE.std_logic_unsigned.ALL;
+USE IEEE.numeric_std.ALL;
+USE IEEE.math_real.all;
 
 
-entity Test_Turbo is
-    port(input : in std_logic;
-         clk : in std_logic;
-         output :out std_logic
+ENTITY test_Turbo IS
+
+END test_Turbo;
+
+
+ARCHITECTURE behav OF test_Turbo IS
+
+COMPONENT Turbo IS
+PORT(
+	-- Clock and Reset
+	clk : IN std_logic;
+	rstb : IN std_logic;
+
+	-- Interface I/O
+	input : IN std_logic;
+        output :OUT std_logic
          );
-end Test_Turbo;   
+END COMPONENT;   
 
-architecture behav of Test_Turbo is 
+-- Define Signals
 
-signal CE1_Out:std_logic_vector(1 downto 0);
-signal VD1_Out:bit;
+	signal CycleNumber : integer;
 
-component CEncoder
-    port(input : in std_logic;
-         clk : in std_logic;
-         output :out std_logic_vector (1 downto 0)
-         );
-end component;
+	signal clk_i 	: std_logic;
+	signal rstb_i 	: std_logic;
+	signal input_i 	:  std_logic;
+	signal output_i :  std_logic;
 
 
-component ViterbiDecoder
-        port (input: in std_logic_vector (1 downto 0);
-          clk: in std_logic;
-          output: out bit); 
-end component;
+BEGIN
 
-begin
+		-- Generate Clock
+	GenerateCLK:
+	PROCESS
+	VARIABLE TimeHigh : time := 5 ns;
+	VARIABLE TimeLow : time := 5 ns;
+	VARIABLE CycleCount: integer := 0;
+ 
+	BEGIN
+	clk_i <= '1';
+	WAIT FOR TimeHigh;
+	clk_i <= '0';
+	WAIT FOR TimeLow;
+
+	--Handle Reset
+	CycleCount := CycleCount + 1;
+	CycleNumber <= CycleCount AFTER 1 ns;
+
+	END PROCESS GenerateCLK;
+
+
+	-- Generate Global Reset
+	GenerateRSTB:
+	PROCESS(CycleNumber)
+	VARIABLE ResetTime : INTEGER := 2000;
+	
+	BEGIN
+	IF (CycleNumber <= ResetTime) THEN
+		rstb_i <= '1' AFTER 1 ns;
+	ELSE
+		rstb_i <= '0' AFTER 1 ns;
+	END IF; 
+	END PROCESS GenerateRSTB;
+
+
     
-    CE1:CEncoder port map( 	input => input,
-				clk => clk,
-				output => CE1_Out
-			);
-        
-    CE2:ViterbiDecoder port map(	input => CE1_Out,
-					clk => clk,
-					output => VD1_Out
-			);
-    
-end behav;
+
+
+	-- Port Map Declaration
+	test: Turbo PORT MAP( 		clk => clk_i,
+				       	rstb => rstb_i,
+					input => input_i,
+					output => output_i
+				        );
+	-- Perform Test
+	Do_Test:
+	PROCESS
+	BEGIN
+
+	
+	WAIT FOR 5 ns;
+
+	input_i	<= '1';
+        WAIT FOR 5 ns;
+	input_i	<= '0';
+	
+	WAIT FOR 5 ns;
+
+
+	input_i	<= '0';
+        WAIT FOR 5 ns;
+	input_i	<= '0';
+	
+	WAIT FOR 5 ns;
+
+	input_i	<= '1';
+        WAIT FOR 5 ns;
+	input_i	<= '0';
+	
+	WAIT FOR 5 ns;
+
+	input_i	<= '0';
+        WAIT FOR 5 ns;
+	input_i	<= '0';
+	
+	WAIT FOR 5 ns;
+
+
+	input_i	<= '1';
+        WAIT FOR 5 ns;
+	input_i	<= '0';
+	
+	WAIT FOR 5 ns;
+
+
+	input_i	<= '0';
+        WAIT FOR 5 ns;
+	input_i	<= '0';
+	
+	WAIT FOR 5 ns;
+	input_i	<= 'U'
+
+	
+
+
+
+	END PROCESS Do_Test;
+
+
+END behav;

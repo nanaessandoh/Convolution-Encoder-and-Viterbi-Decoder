@@ -35,24 +35,28 @@ PORT(
 END COMPONENT; 
 
 
-component ViterbiDecoder
-     PORT (
-          input: IN std_logic_vector (1 downto 0);
-          clk: IN std_logic;
-          output: OUT bit); 
+COMPONENT ViterbiDecoder IS
+PORT (
+	-- Clock
+	clk: in std_logic;
+
+	-- Interface I/O
+	input: in std_logic_vector (1 downto 0);
+	output: out std_logic);
+
 END COMPONENT;
 
 BEGIN
-    
-    CE1:TEncoder PORT MAP( 	clk => clk,
+	
+	CE1:TEncoder PORT MAP( 	clk => clk,
 				rstb => rstb,
 				input => input,
 				output => CE1_Out
 			);
         
-    CE2:ViterbiDecoder PORT MAP(	input => CE1_Out,
-					clk => clk,
-					output => VD1_Out
+	CE2:ViterbiDecoder PORT MAP(	clk => clk,
+					input => CE1_Out,	
+					output => output
 			);
     
 END behav;

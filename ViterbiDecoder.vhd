@@ -13,7 +13,7 @@ PORT (
 	input: in std_logic_vector (1 downto 0);
 
 	-- The Output will be delayed for 3 Clock Cycles because the depth of the traceback is 3
-	output: out bit);
+	output: out std_logic);
 
 END ViterbiDecoder;
 
@@ -21,9 +21,9 @@ ARCHITECTURE behav OF ViterbiDecoder IS
 type word_2 is array (1 downto 0) of std_logic_vector (1 downto 0);
 type word_4_NextState is array (3 downto 0) of std_logic_vector (1 downto 0);
 type word_3 is array (2 downto 0) of std_logic_vector (1 downto 0); 
-type word_3_bit is array (2 downto 0) of bit; 
+type word_3_bit is array (2 downto 0) of std_logic; 
 type word_4 is array (3 downto 0) of integer;
-type word_4_bit is array (3 downto 0) of bit;
+type word_4_bit is array (3 downto 0) of std_logic;
 type memory_4 is array (3 downto 0) of word_2;
 type memory_4_bit is array (3 downto 0) of word_4_bit;
 type memory_4_NextState is array (3 downto 0) of word_4_NextState;

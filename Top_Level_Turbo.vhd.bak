@@ -1,43 +1,64 @@
-library ieee;
-use ieee.std_logic_1164.all;
+LIBRARY IEEE;
+USE IEEE.std_logic_1164.ALL;
+USE IEEE.std_logic_arith.ALL;
+USE IEEE.std_logic_unsigned.ALL;
+USE IEEE.numeric_std.ALL;
 
 
-entity Turbo is
-    port(input : in std_logic;
-         clk : in std_logic;
-         output :out std_logic
+ENTITY Turbo IS
+PORT(
+	-- Clock and Reset
+	clk : IN std_logic;
+	rstb : IN std_logic;
+
+	-- Interface I/O
+	input : IN std_logic;
+        output :OUT std_logic
          );
-end Turbo;   
+END Turbo;   
 
-architecture behav of Turbo is 
+ARCHITECTURE behav OF Turbo IS 
 
-signal CE1_Out:std_logic_vector(1 downto 0);
-signal VD1_Out:bit;
+SIGNAL CE1_Out:std_logic_vector(1 downto 0);
+SIGNAL VD1_Out:bit;
 
-component CEncoder
-    port(input : in std_logic;
-         clk : in std_logic;
-         output :out std_logic_vector (1 downto 0)
+COMPONENT TEncoder IS
+PORT(
+	-- Clock and Reset
+	clk : IN std_logic;
+	rstb : IN std_logic;
+
+	-- Interface I/O
+         input : IN std_logic;
+         output :OUT std_logic_vector (1 downto 0)
          );
-end component;
+END COMPONENT; 
 
 
-component ViterbiDecoder
-        port (input: in std_logic_vector (1 downto 0);
-          clk: in std_logic;
-          output: out bit); 
-end component;
+COMPONENT ViterbiDecoder IS
+PORT (
+	-- Clock
+	clk: in std_logic;
 
-begin
+	-- Interface I/O
+	input: in std_logic_vector (1 downto 0);
+	output: out bit);
+
+END COMPONENT;
+
+BEGIN
+	
+	--output <= std_logic(VD1_Out);
     
-    CE1:CEncoder port map( 	input => input,
-				clk => clk,
+	CE1:TEncoder PORT MAP( 	clk => clk,
+				rstb => rstb,
+				input => input,
 				output => CE1_Out
 			);
         
-    CE2:ViterbiDecoder port map(	input => CE1_Out,
-					clk => clk,
+	CE2:ViterbiDecoder PORT MAP(	clk => clk,
+					input => CE1_Out,	
 					output => VD1_Out
 			);
     
-end behav;
+END behav;
