@@ -84,7 +84,7 @@ BEGIN
 	test: Convolutional PORT MAP( 	clk => clk_i,
 				       	rstb => rstb_i,
 					isop => isop_i,
-					ivalid => ivalid_i,
+					ivalid => ivalid,
 					input => input_i,
 					output => output_i
 				        );

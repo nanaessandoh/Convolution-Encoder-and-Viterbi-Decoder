@@ -81,6 +81,8 @@ BEGIN
 	WHEN ENCODE =>
 	IF (ivalid /= '1') THEN
 	next_state <= NODATA;
+	ELSIF (ivalid /= '1' and input = 'U') THEN
+	next_state <= IDLE;
 	ELSE
 	next_state <= ENCODE;
 	END IF;
@@ -118,15 +120,9 @@ BEGIN
 	IF ( clk'EVENT and clk = '1') THEN
 
 
-	IF (current_state = ONRESET) THEN
-	DF1_out <= 'U';
-	DF2_out <= 'U';
-	END IF;
-
-
 	IF (current_state = ENCODE) THEN
-	output(1)<= input xor DF1_out xor DF2_out;
-	output(0)<= input xor DF2_out;	
+	output(1) <= input xor DF1_out xor DF2_out;
+	output(0) <= input xor DF2_out;	
 	END IF;
 
 	END IF;

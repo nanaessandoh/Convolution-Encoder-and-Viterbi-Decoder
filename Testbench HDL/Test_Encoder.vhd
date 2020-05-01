@@ -111,6 +111,13 @@ BEGIN
 	WAIT FOR 10 ns;
 	input_i	<= '1';
         WAIT FOR 10 ns;
+--------------------------
+	input_i	<= 'U';
+	ivalid_i <= '0';
+	WAIT FOR 30 ns;
+	ivalid_i <= '1';
+	WAIT FOR 10 ns;
+--------------------------
 	input_i	<= '0';
 	WAIT FOR 10 ns;
 	input_i	<= '1';
@@ -118,6 +125,12 @@ BEGIN
 	input_i	<= '1';
 	WAIT FOR 10 ns;
 	input_i	<= '0';
+        WAIT FOR 10 ns;
+	input_i	<= '0';
+        WAIT FOR 10 ns;
+	input_i	<= '1';
+        WAIT FOR 10 ns;
+	input_i	<= '1';
         WAIT FOR 10 ns;
 	input_i	<= 'U';
 	WAIT FOR 10 ns;

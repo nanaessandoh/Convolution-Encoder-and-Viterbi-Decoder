@@ -1,13 +1,13 @@
 onerror {resume}
 quietly WaveActivateNextPane {} 0
 add wave -noupdate /test_decoder/test/clk
-add wave -noupdate -expand /test_decoder/test/input
+add wave -noupdate /test_decoder/test/input
 add wave -noupdate /test_decoder/test/output
 TreeUpdate [SetDefaultTree]
-WaveRestoreCursors {{Cursor 1} {0 ps} 0}
-quietly wave cursor active 0
-configure wave -namecolwidth 150
-configure wave -valuecolwidth 100
+WaveRestoreCursors {{Cursor 1} {942831 ps} 0}
+quietly wave cursor active 1
+configure wave -namecolwidth 178
+configure wave -valuecolwidth 47
 configure wave -justifyvalue left
 configure wave -signalnamewidth 0
 configure wave -snapdistance 10
@@ -20,4 +20,4 @@ configure wave -griddelta 40
 configure wave -timeline 0
 configure wave -timelineunits ns
 update
-WaveRestoreZoom {1999050 ps} {2000050 ps}
+WaveRestoreZoom {0 ps} {526413 ps}
