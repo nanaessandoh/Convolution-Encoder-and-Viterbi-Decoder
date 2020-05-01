@@ -1,0 +1,35 @@
+# Compile of D-FlipFlop.vhd was successful.
+# Compile of Convolutional_Encoder.vhd was successful.
+# Compile of Convolutional_Encoder.vhd was successful.
+# Compile of D-FlipFlop.vhd was successful.
+# Compile of Top_Level_Convolutional.vhd was successful.
+# Compile of Viterbi_Decoder.vhd was successful.
+# Compile of Test_Decoder.vhd was successful.
+# Compile of Test_Encoder.vhd was successful.
+# Compile of Test_Top_Level.vhd was successful.
+# 7 compiles, 0 failed with no errors.
+# Compile of Convolutional_Encoder.vhd was successful.
+# Compile of Viterbi_Decoder.vhd was successful.
+# Compile of Viterbi_Decoder.vhd was successful.
+# Compile of Viterbi_Decoder.vhd was successful.
+# Compile of Top_Level_Convolutional.vhd was successful.
+# Compile of Top_Level_Convolutional.vhd was successful.
+# Compile of Top_Level_Convolutional.vhd was successful.
+# Compile of Test_Encoder.vhd failed with 3 errors.
+# Compile of Test_Encoder.vhd was successful.
+# Compile of Convolutional_Encoder.vhd was successful.
+# Compile of Test_Encoder.vhd was successful.
+# Compile of Test_Encoder.vhd was successful.
+vsim -gui work.test_encoder
+# vsim -gui work.test_encoder 
+# Start time: 23:05:08 on Apr 30,2020
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading ieee.numeric_std(body)
+# Loading ieee.math_real(body)
+# Loading work.test_encoder(behav)
+# Loading work.encoder(behav)
+# Loading work.dflipflop(behav)

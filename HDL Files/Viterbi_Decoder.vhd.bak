@@ -1,3 +1,8 @@
+-- Portions of this Code were adapted from the Viterbi Decoder design by:( See Below)
+--	Mustafa Ozcelikors thewebblog.net | github.com/mozcelikors | <mozcelikors@gmail.com>
+--	Hassan Qayyum
+--	Umair Saleem
+
 LIBRARY IEEE;
 USE IEEE.std_logic_1164.ALL;
 USE IEEE.std_logic_arith.ALL;
@@ -9,10 +14,10 @@ PORT (
 	-- Clock
 	clk: in std_logic;
 
-	-- Interface I/O
+	-- Input Interface
 	input: in std_logic_vector (1 downto 0);
 
-	-- The Output will be delayed for 3 Clock Cycles because the depth of the traceback is 3
+	-- Output Interface 
 	output: out std_logic);
 
 END ViterbiDecoder;
@@ -31,57 +36,56 @@ type memory_8 is array (7 downto 0) of integer;
 type memory_traceback_row is array (7 downto 0) of word_3;
 type memory_traceback_table is array (3 downto 0) of memory_traceback_row;
 
---Traceback Depth is 3 
+-- Traceback Depth is 3 
 -- All 32 paths have been hardcoded
--- Below are 4 tables each containing 8 possible paths depending on the initial state
-constant traceback_table: memory_traceback_table:=((("00","00","00"),("11","10","11"),("00","11","10"),("11","01","01"),("00","00","11"),("11","10","00"),("00","11","01"),("11","01","10")),
-                                                  (("11","00","00"),("00","10","11"),("11","11","10"),("00","01","01"),("11","00","11"),("00","10","00"),("11","11","01"),("00","01","10")),
-                                                  (("10","11","00"),("01","01","11"),("10","00","10"),("01","10","01"),("10","11","11"),("01","01","00"),("10","00","01"),("01","10","10")),
-                                                  (("01","11","00"),("10","01","11"),("01","00","10"),("10","10","01"),("01","11","11"),("10","01","00"),("01","00","01"),("10","10","10")));
+-- The 4 traceback tables each containing 8 possible paths depending on the initial state
 
---The next table maps the state transitions to the inputs that caused them(Current State Vs. output)
--- -1 means invalid operation
---constant outputTable:memory_4_bit:=((0,-1,-1,1),(1,-1,-1,0),(-1,1,0,-1),(-1,0,1,-1));
-constant outputTable:memory_4_bit:=(('0','0','0','1'),('1','0','0','0'),('0','1','0','0'),('0','0','1','0'));
+constant traceback_table: memory_traceback_table := ((("00","00","00"),("11","10","11"),("00","11","10"),("11","01","01"),("00","00","11"),("11","10","00"),("00","11","01"),("11","01","10")),
+                                                    (("11","00","00"),("00","10","11"),("11","11","10"),("00","01","01"),("11","00","11"),("00","10","00"),("11","11","01"),("00","01","10")),
+                                                    (("10","11","00"),("01","01","11"),("10","00","10"),("01","10","01"),("10","11","11"),("01","01","00"),("10","00","01"),("01","10","10")),
+                                                    (("01","11","00"),("10","01","11"),("01","00","10"),("10","10","01"),("01","11","11"),("10","01","00"),("01","00","01"),("10","10","10")));
 
---The next table gets the next state providing the current state and the state transition
+-- Next table maps the state transitions to the inputs (Current State Vs. output)
+constant outputTable:memory_4_bit := (('0','0','0','1'),('1','0','0','0'),('0','1','0','0'),('0','0','1','0'));
+
+-- Next table gets the next state providing the current state and the state transition
 constant nextStateTable:memory_4_NextState:=(("00","00","00","10"),("10","00","00","00"),("00","11","01","00"),("00","01","11","00"));
 
 
-constant TraceBackDepth: positive:=3;
+constant TraceBackDepth: positive := 3;
 
 
-FUNCTION hammingDistance(a:std_logic_vector (1 downto 0)) RETURN integer IS
+FUNCTION hammingDistance(load :std_logic_vector (1 downto 0)) RETURN integer IS
 BEGIN
   
-  CASE a IS
+  CASE load IS
                   WHEN "00" =>
-                      RETURN 0;
+                  RETURN 0;
                   WHEN "01" =>
-                      RETURN 1;
+                  RETURN 1;
                   WHEN "10" =>
-                      RETURN 1;
+                  RETURN 1;
                   WHEN "11" =>
-                      RETURN 2;
+                  RETURN 2;
                   WHEN OTHERS => 
-                     RETURN -1; --INVALID OPERATION
+                  RETURN -1; --Invalid
  END CASE; 
 END hammingDistance; 
 
-FUNCTION conv_int(a:std_logic_vector (1 downto 0)) RETURN integer IS
+FUNCTION conv_int( load :std_logic_vector (1 downto 0)) RETURN integer IS
 BEGIN
   
-  CASE a IS
+  CASE load IS
                   WHEN "00" =>
-                      RETURN 0;
+                  RETURN 0;
                   WHEN "01" =>
-                      RETURN 1;
+                  RETURN 1;
                   WHEN "10" =>
-                      RETURN 2;
+                  RETURN 2;
                   WHEN "11" =>
-                      RETURN 3;
+                  RETURN 3;
                   WHEN OTHERS => 
-                     RETURN -1; --invalid operation
+                  RETURN -1; --Invalid
  END CASE; 
 END conv_int; 
 
@@ -101,17 +105,17 @@ BEGIN
    variable temp_output:std_logic_vector (1 downto 0);
    BEGIN
             IF (clk'event) and (clk='1') and (input/= "UU")  THEN -- Positive Edge
-               i:=0;
+               i := 0;
                
                -- Branch Metric Calculations
                WHILE i <8 LOOP
-                         TracebackResult(i):=TracebackResult(i)+ hammingDistance(traceback_table(3-conv_int(InitialState))(7-i)(2-InputLevel) xor input );
-                          i:=i+1;
+               TracebackResult(i):=TracebackResult(i)+ hammingDistance(traceback_table(3-conv_int(InitialState))(7-i)(2-InputLevel) xor input );
+               i := i+1;
                END LOOP;    
                          
                
-               --Output the decoded data, from the previous path metric calculations
-               --Output will be delayed for 3 clock cycles
+               -- Output the decoded data, from the previous path metric calculations
+               -- Output will be delayed for 3 clock cycles
                output <= outputVector(InputLevel);
                
                InputLevel:=InputLevel+1;

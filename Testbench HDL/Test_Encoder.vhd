@@ -6,38 +6,44 @@ USE IEEE.numeric_std.ALL;
 USE IEEE.math_real.all;
 
 
-ENTITY test_Turbo IS
+ENTITY test_Encoder IS
 
-END test_Turbo;
+END test_Encoder;
 
 
-ARCHITECTURE behav OF test_Turbo IS
+ARCHITECTURE behav OF test_Encoder IS
 
-COMPONENT Turbo IS
+COMPONENT Encoder
 PORT(
 	-- Clock and Reset
 	clk : IN std_logic;
 	rstb : IN std_logic;
 
-	-- Interface I/O
+	-- Input Interface I/O
+	isop : IN std_logic;
+	ivalid: IN std_logic;
 	input : IN std_logic;
-        output :OUT std_logic
+
+	-- Output Interface I/O
+        output :OUT std_logic_vector (1 downto 0)
          );
 END COMPONENT;   
 
--- Define Signals
+	-- Define Signals
 
 	signal CycleNumber : integer;
 
 	signal clk_i 	: std_logic;
 	signal rstb_i 	: std_logic;
-	signal input_i 	:  std_logic;
-	signal output_i :  std_logic;
+	signal isop_i	: std_logic;
+	signal ivalid_i	: std_logic;
+	signal input_i 	: std_logic;
+	signal output_i : std_logic_vector (1 downto 0);
 
 
 BEGIN
 
-		-- Generate Clock
+	-- Generate Clock
 	GenerateCLK:
 	PROCESS
 	VARIABLE TimeHigh : time := 5 ns;
@@ -69,16 +75,16 @@ BEGIN
 		rstb_i <= '0' AFTER 1 ns;
 	END IF; 
 	END PROCESS GenerateRSTB;
-
-
-    
+  
 
 
 	-- Port Map Declaration
-	test: Turbo PORT MAP( 		clk => clk_i,
-				       	rstb => rstb_i,
-					input => input_i,
-					output => output_i
+	test: Encoder PORT MAP( 	clk 	=> clk_i,
+				       	rstb 	=> rstb_i,
+					isop 	=> isop_i,
+					ivalid 	=> ivalid_i,
+					input 	=> input_i,
+					output 	=> output_i
 				        );
 	-- Perform Test
 	Do_Test:
@@ -87,8 +93,11 @@ BEGIN
 
 	
 	WAIT FOR 10 ns;
+	isop_i <= '1';
+	ivalid_i <= '1';
 
-	input_i	<= '1';
+	WAIT FOR 10 ns;
+	input_i	<= '1';	
         WAIT FOR 10 ns;
 	input_i	<= '1';
 	WAIT FOR 10 ns;
@@ -96,29 +105,30 @@ BEGIN
         WAIT FOR 10 ns;
 	input_i	<= '0';
 	WAIT FOR 10 ns;
-	input_i	<= '0';
+	input_i	<= '1';
         WAIT FOR 10 ns;
 	input_i	<= '0';
 	WAIT FOR 10 ns;
 	input_i	<= '1';
+        WAIT FOR 10 ns;
+	input_i	<= '0';
+	WAIT FOR 10 ns;
+	input_i	<= '1';
+        WAIT FOR 10 ns;
+	input_i	<= '1';
+	WAIT FOR 10 ns;
+	input_i	<= '0';
         WAIT FOR 10 ns;
 	input_i	<= 'U';
 	WAIT FOR 10 ns;
-	input_i	<= '0';
-        WAIT FOR 10 ns;
 	input_i	<= 'U';
-	WAIT FOR 10 ns;
-	input_i	<= '1';
-        WAIT FOR 10 ns;
-	input_i	<= '0';
 	WAIT FOR 10 ns;
 	input_i	<= 'U';
 	WAIT FOR 50 ns;
 	
 
-
-
 	END PROCESS Do_Test;
 
 
 END behav;
+

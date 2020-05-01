@@ -26,8 +26,7 @@ PORT (
 
 END COMPONENT;  
 
--- Define Signals
-
+	-- Define Signals
 	signal CycleNumber : integer;
 
 	signal clk_i 	: std_logic;
@@ -37,7 +36,7 @@ END COMPONENT;
 
 BEGIN
 
-		-- Generate Clock
+	-- Generate Clock
 	GenerateCLK:
 	PROCESS
 	VARIABLE TimeHigh : time := 5 ns;
@@ -55,8 +54,6 @@ BEGIN
 	CycleNumber <= CycleCount AFTER 1 ns;
 
 	END PROCESS GenerateCLK;
-
-
 
 
 

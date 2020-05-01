@@ -5,37 +5,45 @@ USE IEEE.std_logic_unsigned.ALL;
 USE IEEE.numeric_std.ALL;
 
 
-ENTITY Turbo IS
+ENTITY Convolutional IS
 PORT(
 	-- Clock and Reset
 	clk : IN std_logic;
 	rstb : IN std_logic;
 
-	-- Interface I/O
+	-- Input Interface I/O
+	isop : IN std_logic;
+	ivalid: IN std_logic;
 	input : IN std_logic;
+
+	-- Output Interface I/O
         output :OUT std_logic
          );
-END Turbo;   
 
-ARCHITECTURE behav OF Turbo IS 
+END Convolutional;   
+
+ARCHITECTURE behav OF Convolutional IS 
 
 SIGNAL CE1_Out:std_logic_vector(1 downto 0);
 SIGNAL VD1_Out:bit;
 
-COMPONENT TEncoder IS
+COMPONENT Encoder
 PORT(
 	-- Clock and Reset
 	clk : IN std_logic;
 	rstb : IN std_logic;
 
 	-- Interface I/O
-         input : IN std_logic;
-         output :OUT std_logic_vector (1 downto 0)
+	isop : IN std_logic;
+	ivalid: IN std_logic;
+	input : IN std_logic;
+        output :OUT std_logic_vector (1 downto 0)
+
          );
 END COMPONENT; 
 
 
-COMPONENT ViterbiDecoder IS
+COMPONENT ViterbiDecoder 
 PORT (
 	-- Clock
 	clk: in std_logic;
@@ -48,13 +56,15 @@ END COMPONENT;
 
 BEGIN
 	
-	CE1:TEncoder PORT MAP( 	clk => clk,
+	CE1: Encoder PORT MAP( 	clk => clk,
 				rstb => rstb,
+				isop => isop,
+				ivalid => ivalid,
 				input => input,
 				output => CE1_Out
 			);
         
-	CE2:ViterbiDecoder PORT MAP(	clk => clk,
+	CE2: ViterbiDecoder PORT MAP(	clk => clk,
 					input => CE1_Out,	
 					output => output
 			);

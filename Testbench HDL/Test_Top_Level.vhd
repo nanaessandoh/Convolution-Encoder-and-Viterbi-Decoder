@@ -6,22 +6,22 @@ USE IEEE.numeric_std.ALL;
 USE IEEE.math_real.all;
 
 
-ENTITY test_Encoder IS
+ENTITY test_Turbo IS
 
 END test_Turbo;
 
 
-ARCHITECTURE behav OF test_Encoder IS
+ARCHITECTURE behav OF test_Turbo IS
 
-COMPONENT TEncoder
+COMPONENT Turbo IS
 PORT(
-	-- CLock and Reset
+	-- Clock and Reset
 	clk : IN std_logic;
 	rstb : IN std_logic;
 
 	-- Interface I/O
-         input : IN std_logic;
-         output :OUT std_logic_vector (1 downto 0)
+	input : IN std_logic;
+        output :OUT std_logic
          );
 END COMPONENT;   
 
@@ -31,8 +31,8 @@ END COMPONENT;
 
 	signal clk_i 	: std_logic;
 	signal rstb_i 	: std_logic;
-	signal input_i 	: std_logic;
-	signal output_i : std_logic_vector (1 downto 0);
+	signal input_i 	:  std_logic;
+	signal output_i :  std_logic;
 
 
 BEGIN
@@ -75,7 +75,7 @@ BEGIN
 
 
 	-- Port Map Declaration
-	test: TEncoder PORT MAP( 	clk => clk_i,
+	test: Turbo PORT MAP( 		clk => clk_i,
 				       	rstb => rstb_i,
 					input => input_i,
 					output => output_i
@@ -90,14 +90,6 @@ BEGIN
 
 	input_i	<= '1';
         WAIT FOR 10 ns;
-	input_i	<= '1';
-	WAIT FOR 10 ns;
-	input_i	<= '1';
-        WAIT FOR 10 ns;
-	input_i	<= '0';
-	WAIT FOR 10 ns;
-	input_i	<= '1';
-        WAIT FOR 10 ns;
 	input_i	<= '0';
 	WAIT FOR 10 ns;
 	input_i	<= '1';
@@ -110,8 +102,14 @@ BEGIN
 	WAIT FOR 10 ns;
 	input_i	<= '0';
         WAIT FOR 10 ns;
-	input_i	<= 'U';
+	input_i	<= '0';
 	WAIT FOR 10 ns;
+	input_i	<= '1';
+        WAIT FOR 10 ns;
+	input_i	<= '1';
+	WAIT FOR 10 ns;
+	input_i	<= '0';
+        WAIT FOR 10 ns;
 	input_i	<= 'U';
 	WAIT FOR 10 ns;
 	input_i	<= 'U';
@@ -124,4 +122,3 @@ BEGIN
 
 
 END behav;
-
