@@ -1,0 +1,37 @@
+|Encoder
+clk => DFlipFlop:DF1.clk
+clk => output[0]~reg0.CLK
+clk => output[1]~reg0.CLK
+clk => DFlipFlop:DF2.clk
+clk => current_state~1.DATAIN
+rstb => DFlipFlop:DF1.rstb
+rstb => DFlipFlop:DF2.rstb
+rstb => current_state~3.DATAIN
+isop => sequential.IN0
+isop => sequential.IN0
+ivalid => sequential.IN1
+ivalid => Selector1.IN3
+ivalid => sequential.IN1
+ivalid => Selector2.IN1
+ivalid => Selector2.IN2
+input => output.IN1
+input => output.IN1
+input => DFlipFlop:DF1.D
+output[0] <= output[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+output[1] <= output[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Encoder|DFlipFlop:DF1
+clk => Q~reg0.CLK
+rstb => ~NO_FANOUT~
+D => Q~reg0.DATAIN
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Encoder|DFlipFlop:DF2
+clk => Q~reg0.CLK
+rstb => ~NO_FANOUT~
+D => Q~reg0.DATAIN
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

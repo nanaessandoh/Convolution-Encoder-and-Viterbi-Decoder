@@ -10,7 +10,7 @@ z2
 cModel Technology
 dC:/intelFPGA_pro/19.4
 Econvolutional
-Z0 w1588292463
+Z0 w1588344428
 Z1 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
 Z2 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
 Z3 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
@@ -25,9 +25,9 @@ Va:8bT[il8BE:CI[B]Z4Uo1
 !s100 chV13MOTg?HnENU`DbBQ@3
 Z9 OV;C;2019.2;69
 32
-Z10 !s110 1588303742
+Z10 !s110 1588344434
 !i10b 1
-Z11 !s108 1588303742.000000
+Z11 !s108 1588344433.000000
 Z12 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/nanae/iCloudDrive/MUN/Project/Project Codes/Convolutional-Encoder-Viterbi-Decoder/HDL Files/Top_Level_Convolutional.vhd|
 Z13 !s107 C:/Users/nanae/iCloudDrive/MUN/Project/Project Codes/Convolutional-Encoder-Viterbi-Decoder/HDL Files/Top_Level_Convolutional.vhd|
 !i113 1
@@ -40,10 +40,10 @@ R3
 R4
 R5
 DEx4 work 13 convolutional 0 22 a:8bT[il8BE:CI[B]Z4Uo1
-l57
+l56
 L25
-VV4D`CgR<1X_d^lF?;Dk7[3
-!s100 :;5KLm>iFXfdUdVYM34z;3
+V0OciFf0Mhe02>nQPmaUCf1
+!s100 oFgc2nYUL:]<zHcf`UJhV2
 R9
 32
 R10
@@ -71,11 +71,11 @@ V4cU`W>eggD4EAHF]Vhj>^2
 !s100 g?R4g^O=iWnVU:bJoW:511
 R9
 32
-R10
+Z20 !s110 1588344433
 !i10b 1
 R11
-Z20 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/nanae/iCloudDrive/MUN/Project/Project Codes/Convolutional-Encoder-Viterbi-Decoder/HDL Files/D-FlipFlop.vhd|
-Z21 !s107 C:/Users/nanae/iCloudDrive/MUN/Project/Project Codes/Convolutional-Encoder-Viterbi-Decoder/HDL Files/D-FlipFlop.vhd|
+Z21 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/nanae/iCloudDrive/MUN/Project/Project Codes/Convolutional-Encoder-Viterbi-Decoder/HDL Files/D-FlipFlop.vhd|
+Z22 !s107 C:/Users/nanae/iCloudDrive/MUN/Project/Project Codes/Convolutional-Encoder-Viterbi-Decoder/HDL Files/D-FlipFlop.vhd|
 !i113 1
 R14
 R15
@@ -93,33 +93,33 @@ VGYa>G6CL2X0L;>XE[c[WC3
 !s100 `@nJ:@Z>BMDCU>cWP7f6m0
 R9
 32
-R10
+R20
 !i10b 1
 R11
-R20
 R21
+R22
 !i113 1
 R14
 R15
 Eencoder
-Z22 w1588299978
+Z23 w1588299978
 R1
 R2
 R3
 R4
 R5
 R6
-Z23 8C:\Users\nanae\iCloudDrive\MUN\Project\Project Codes\Convolutional-Encoder-Viterbi-Decoder\HDL Files\Convolutional_Encoder.vhd
-Z24 FC:\Users\nanae\iCloudDrive\MUN\Project\Project Codes\Convolutional-Encoder-Viterbi-Decoder\HDL Files\Convolutional_Encoder.vhd
+Z24 8C:\Users\nanae\iCloudDrive\MUN\Project\Project Codes\Convolutional-Encoder-Viterbi-Decoder\HDL Files\Convolutional_Encoder.vhd
+Z25 FC:\Users\nanae\iCloudDrive\MUN\Project\Project Codes\Convolutional-Encoder-Viterbi-Decoder\HDL Files\Convolutional_Encoder.vhd
 l0
 L7
 V_<3R09U<WAzXYk<oXGl=;3
 !s100 ADMI;j<WoCf9CgieM6Xd10
 R9
 32
-R10
+R20
 !i10b 1
-Z25 !s108 1588303741.000000
+R11
 Z26 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:\Users\nanae\iCloudDrive\MUN\Project\Project Codes\Convolutional-Encoder-Viterbi-Decoder\HDL Files\Convolutional_Encoder.vhd|
 Z27 !s107 C:\Users\nanae\iCloudDrive\MUN\Project\Project Codes\Convolutional-Encoder-Viterbi-Decoder\HDL Files\Convolutional_Encoder.vhd|
 !i113 1
@@ -138,9 +138,9 @@ VlKBz?QLhN:d_j:HmmYC_b0
 !s100 3So^RE5Q295XC8@L:NlEz2
 R9
 32
-R10
+R20
 !i10b 1
-R25
+R11
 R26
 R27
 !i113 1
@@ -163,9 +163,9 @@ VlBo1^Wl;glZPa;ECkZc?h3
 !s100 Ldck=z?E`QSfFTOYkoM:X2
 R9
 32
-Z31 !s110 1588303743
+Z31 !s110 1588344435
 !i10b 1
-Z32 !s108 1588303743.000000
+Z32 !s108 1588344434.000000
 Z33 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/nanae/iCloudDrive/MUN/Project/Project Codes/Convolutional-Encoder-Viterbi-Decoder/Testbench HDL/Test_Decoder.vhd|
 Z34 !s107 C:/Users/nanae/iCloudDrive/MUN/Project/Project Codes/Convolutional-Encoder-Viterbi-Decoder/Testbench HDL/Test_Decoder.vhd|
 !i113 1
@@ -212,9 +212,9 @@ R9
 32
 R31
 !i10b 1
-R32
-Z38 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/nanae/iCloudDrive/MUN/Project/Project Codes/Convolutional-Encoder-Viterbi-Decoder/Testbench HDL/Test_Encoder.vhd|
-Z39 !s107 C:/Users/nanae/iCloudDrive/MUN/Project/Project Codes/Convolutional-Encoder-Viterbi-Decoder/Testbench HDL/Test_Encoder.vhd|
+Z38 !s108 1588344435.000000
+Z39 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/nanae/iCloudDrive/MUN/Project/Project Codes/Convolutional-Encoder-Viterbi-Decoder/Testbench HDL/Test_Encoder.vhd|
+Z40 !s107 C:/Users/nanae/iCloudDrive/MUN/Project/Project Codes/Convolutional-Encoder-Viterbi-Decoder/Testbench HDL/Test_Encoder.vhd|
 !i113 1
 R14
 R15
@@ -234,14 +234,14 @@ R9
 32
 R31
 !i10b 1
-R32
 R38
 R39
+R40
 !i113 1
 R14
 R15
 Etest_turbo
-Z40 w1588303817
+Z41 w1588342922
 R17
 R1
 R2
@@ -249,19 +249,19 @@ R3
 R4
 R5
 R6
-Z41 8C:/Users/nanae/iCloudDrive/MUN/Project/Project Codes/Convolutional-Encoder-Viterbi-Decoder/Testbench HDL/Test_Top_Level.vhd
-Z42 FC:/Users/nanae/iCloudDrive/MUN/Project/Project Codes/Convolutional-Encoder-Viterbi-Decoder/Testbench HDL/Test_Top_Level.vhd
+Z42 8C:/Users/nanae/iCloudDrive/MUN/Project/Project Codes/Convolutional-Encoder-Viterbi-Decoder/Testbench HDL/Test_Top_Level.vhd
+Z43 FC:/Users/nanae/iCloudDrive/MUN/Project/Project Codes/Convolutional-Encoder-Viterbi-Decoder/Testbench HDL/Test_Top_Level.vhd
 l0
 L9
 VlI=5VGZ<6MlhRI=FjNh3O2
 !s100 AJ38W;PW`AJ_=jRA5ONnH0
 R9
 32
-Z43 !s110 1588303842
+R31
 !i10b 1
-Z44 !s108 1588303842.000000
-Z45 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/nanae/iCloudDrive/MUN/Project/Project Codes/Convolutional-Encoder-Viterbi-Decoder/Testbench HDL/Test_Top_Level.vhd|
-Z46 !s107 C:/Users/nanae/iCloudDrive/MUN/Project/Project Codes/Convolutional-Encoder-Viterbi-Decoder/Testbench HDL/Test_Top_Level.vhd|
+R38
+Z44 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/nanae/iCloudDrive/MUN/Project/Project Codes/Convolutional-Encoder-Viterbi-Decoder/Testbench HDL/Test_Top_Level.vhd|
+Z45 !s107 C:/Users/nanae/iCloudDrive/MUN/Project/Project Codes/Convolutional-Encoder-Viterbi-Decoder/Testbench HDL/Test_Top_Level.vhd|
 !i113 1
 R14
 R15
@@ -272,23 +272,23 @@ R2
 R3
 R4
 R5
-Z47 DEx4 work 10 test_turbo 0 22 lI=5VGZ<6MlhRI=FjNh3O2
+Z46 DEx4 work 10 test_turbo 0 22 lI=5VGZ<6MlhRI=FjNh3O2
 l46
 L14
-VY8iFX^<VWM99V4Mb]AA]f0
-!s100 kmN_jB:Hj4^B9B_8^oi5R3
+Z47 V7QCV=`k]O[MAN?DM1NY_D0
+Z48 !s100 UeRf:@Cef]]nNmVCNER_e0
 R9
 32
-R43
+R31
 !i10b 1
+R38
 R44
 R45
-R46
 !i113 1
 R14
 R15
 Eturbo
-Z48 w1583451996
+Z49 w1583451996
 R1
 R2
 R3
@@ -303,9 +303,9 @@ VO5R:5OJgCNB61:fQnA>AF2
 !s100 lomUi4K1=f4_:T:z6jSch0
 R9
 32
-Z49 !s110 1588282190
+Z50 !s110 1588282190
 !i10b 1
-Z50 !s108 1588282190.000000
+Z51 !s108 1588282190.000000
 R12
 R13
 !i113 1
@@ -324,35 +324,35 @@ V65madkC>S]LCW_geF4]mC1
 !s100 UKjMS1[GADoc=nijacB:[0
 R9
 32
-R49
-!i10b 1
 R50
+!i10b 1
+R51
 R12
 R13
 !i113 1
 R14
 R15
 Eviterbidecoder
-Z51 w1588286110
+Z52 w1588286110
 R1
 R2
 R3
 R4
 R5
 R6
-Z52 8C:/Users/nanae/iCloudDrive/MUN/Project/Project Codes/Convolutional-Encoder-Viterbi-Decoder/HDL Files/Viterbi_Decoder.vhd
-Z53 FC:/Users/nanae/iCloudDrive/MUN/Project/Project Codes/Convolutional-Encoder-Viterbi-Decoder/HDL Files/Viterbi_Decoder.vhd
+Z53 8C:/Users/nanae/iCloudDrive/MUN/Project/Project Codes/Convolutional-Encoder-Viterbi-Decoder/HDL Files/Viterbi_Decoder.vhd
+Z54 FC:/Users/nanae/iCloudDrive/MUN/Project/Project Codes/Convolutional-Encoder-Viterbi-Decoder/HDL Files/Viterbi_Decoder.vhd
 l0
 L12
 V[33Feh?dF<<Pmo9DQ<^:43
 !s100 C4@bOAGYm^iK`<hjM2nlE3
 R9
 32
-R31
+R10
 !i10b 1
-R11
-Z54 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/nanae/iCloudDrive/MUN/Project/Project Codes/Convolutional-Encoder-Viterbi-Decoder/HDL Files/Viterbi_Decoder.vhd|
-Z55 !s107 C:/Users/nanae/iCloudDrive/MUN/Project/Project Codes/Convolutional-Encoder-Viterbi-Decoder/HDL Files/Viterbi_Decoder.vhd|
+R32
+Z55 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/nanae/iCloudDrive/MUN/Project/Project Codes/Convolutional-Encoder-Viterbi-Decoder/HDL Files/Viterbi_Decoder.vhd|
+Z56 !s107 C:/Users/nanae/iCloudDrive/MUN/Project/Project Codes/Convolutional-Encoder-Viterbi-Decoder/HDL Files/Viterbi_Decoder.vhd|
 !i113 1
 R14
 R15
@@ -369,11 +369,11 @@ VDEEnHGQg<L@^Uh3J[kIl42
 !s100 E6]46U1IDMUS;Gb;l7Lah2
 R9
 32
-R31
+R10
 !i10b 1
-R11
-R54
+R32
 R55
+R56
 !i113 1
 R14
 R15

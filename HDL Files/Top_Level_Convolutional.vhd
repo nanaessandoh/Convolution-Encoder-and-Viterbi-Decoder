@@ -25,7 +25,6 @@ END Convolutional;
 ARCHITECTURE behav OF Convolutional IS 
 
 SIGNAL CE1_Out:std_logic_vector(1 downto 0);
-SIGNAL VD1_Out:bit;
 
 COMPONENT Encoder
 PORT(

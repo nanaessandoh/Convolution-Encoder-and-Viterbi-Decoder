@@ -96,7 +96,18 @@ BEGIN
 
 	
 	WAIT FOR 10 ns;
+	isop_i <= '1';
+	ivalid_i <= '1';
 
+	WAIT FOR 10 ns;
+	input_i	<= '1';	
+        WAIT FOR 10 ns;
+	input_i	<= '1';
+	WAIT FOR 10 ns;
+	input_i	<= '1';
+        WAIT FOR 10 ns;
+	input_i	<= '0';
+	WAIT FOR 10 ns;
 	input_i	<= '1';
         WAIT FOR 10 ns;
 	input_i	<= '0';
@@ -112,13 +123,13 @@ BEGIN
 	input_i	<= '0';
         WAIT FOR 10 ns;
 	input_i	<= '0';
-	WAIT FOR 10 ns;
+        WAIT FOR 10 ns;
 	input_i	<= '1';
         WAIT FOR 10 ns;
 	input_i	<= '1';
-	WAIT FOR 10 ns;
-	input_i	<= '0';
         WAIT FOR 10 ns;
+	input_i	<= 'U';
+	WAIT FOR 10 ns;
 	input_i	<= 'U';
 	WAIT FOR 10 ns;
 	input_i	<= 'U';
