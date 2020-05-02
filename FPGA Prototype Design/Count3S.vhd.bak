@@ -1,5 +1,5 @@
 -- 3 Second counter
--- After 3 seconds the value at the input is encoded 
+-- After 3 second the value at the input is encoded 
 LIBRARY IEEE;
 USE IEEE.std_logic_1164.ALL;
 USE IEEE.std_logic_unsigned.ALL;

@@ -54,74 +54,121 @@ R13
 !i113 1
 R14
 R15
-Edflipflop
-Z16 w1583448346
-Z17 DPx4 ieee 9 math_real 0 22 gNk<PdFJ<XNPcfef`f?Z81
-R1
-R2
+Ecount3s
+Z16 w1588365383
+Z17 DPx4 ieee 9 math_real 0 22 Sk6CSihbPL<f[^Shm]=KX0
+Z18 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
 R3
+R2
 R4
-R5
-R6
-Z18 8C:/Users/nanae/iCloudDrive/MUN/Project/Project Codes/Convolutional-Encoder-Viterbi-Decoder/HDL Files/D-FlipFlop.vhd
-Z19 FC:/Users/nanae/iCloudDrive/MUN/Project/Project Codes/Convolutional-Encoder-Viterbi-Decoder/HDL Files/D-FlipFlop.vhd
+Z19 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z20 dC:/Users/Nana Essandoh/Desktop/My Workspace/Convolution-Encoder-and-Viterbi-Decoder/Project Files
+Z21 8C:/Users/Nana Essandoh/Desktop/My Workspace/Convolution-Encoder-and-Viterbi-Decoder/FPGA Prototype Design/Count3S.vhd
+Z22 FC:/Users/Nana Essandoh/Desktop/My Workspace/Convolution-Encoder-and-Viterbi-Decoder/FPGA Prototype Design/Count3S.vhd
 l0
-L8
-V4cU`W>eggD4EAHF]Vhj>^2
-!s100 g?R4g^O=iWnVU:bJoW:511
-R9
+L9
+V?>>T1`PT7haiBY2BY;S7X1
+!s100 F`FK4@TG^S=c=[4FOMkaj1
+Z23 OV;C;10.5b;63
 32
-Z20 !s110 1588344433
+Z24 !s110 1588365391
 !i10b 1
-R11
-Z21 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/nanae/iCloudDrive/MUN/Project/Project Codes/Convolutional-Encoder-Viterbi-Decoder/HDL Files/D-FlipFlop.vhd|
-Z22 !s107 C:/Users/nanae/iCloudDrive/MUN/Project/Project Codes/Convolutional-Encoder-Viterbi-Decoder/HDL Files/D-FlipFlop.vhd|
+Z25 !s108 1588365391.000000
+Z26 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Nana Essandoh/Desktop/My Workspace/Convolution-Encoder-and-Viterbi-Decoder/FPGA Prototype Design/Count3S.vhd|
+Z27 !s107 C:/Users/Nana Essandoh/Desktop/My Workspace/Convolution-Encoder-and-Viterbi-Decoder/FPGA Prototype Design/Count3S.vhd|
 !i113 1
 R14
 R15
 Abehav
 R17
-R1
+R18
+R3
+R2
+R4
+R19
+DEx4 work 7 count3s 0 22 ?>>T1`PT7haiBY2BY;S7X1
+l22
+L18
+VNhR<:YDD[0C7>aJ7K0[CB2
+!s100 2T>Ed^KU:81zMH_JC>kZ;3
+R23
+32
+R24
+!i10b 1
+R25
+R26
+R27
+!i113 1
+R14
+R15
+Edflipflop
+Z28 w1588363206
+R17
+R18
 R2
 R3
 R4
-R5
-DEx4 work 9 dflipflop 0 22 4cU`W>eggD4EAHF]Vhj>^2
+R19
+R20
+Z29 8C:/Users/Nana Essandoh/Desktop/My Workspace/Convolution-Encoder-and-Viterbi-Decoder/FPGA Prototype Design/DFlipFlop.vhd
+Z30 FC:/Users/Nana Essandoh/Desktop/My Workspace/Convolution-Encoder-and-Viterbi-Decoder/FPGA Prototype Design/DFlipFlop.vhd
+l0
+L8
+VAg9YiP^;>B11T7SjncHc@1
+!s100 d6eka=5Q`]gHKlU6T60N93
+R23
+32
+R24
+!i10b 1
+R25
+Z31 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Nana Essandoh/Desktop/My Workspace/Convolution-Encoder-and-Viterbi-Decoder/FPGA Prototype Design/DFlipFlop.vhd|
+Z32 !s107 C:/Users/Nana Essandoh/Desktop/My Workspace/Convolution-Encoder-and-Viterbi-Decoder/FPGA Prototype Design/DFlipFlop.vhd|
+!i113 1
+R14
+R15
+Abehav
+R17
+R18
+R2
+R3
+R4
+R19
+DEx4 work 9 dflipflop 0 22 Ag9YiP^;>B11T7SjncHc@1
 l22
 L20
-VGYa>G6CL2X0L;>XE[c[WC3
-!s100 `@nJ:@Z>BMDCU>cWP7f6m0
-R9
+V@o=aD@U7HoQWJfZg?QQZo3
+!s100 dO@cheLV]9MCeFG2XN0Wa1
+R23
 32
-R20
+R24
 !i10b 1
-R11
-R21
-R22
+R25
+R31
+R32
 !i113 1
 R14
 R15
 Eencoder
-Z23 w1588299978
+Z33 w1588299978
 R1
 R2
 R3
 R4
 R5
 R6
-Z24 8C:\Users\nanae\iCloudDrive\MUN\Project\Project Codes\Convolutional-Encoder-Viterbi-Decoder\HDL Files\Convolutional_Encoder.vhd
-Z25 FC:\Users\nanae\iCloudDrive\MUN\Project\Project Codes\Convolutional-Encoder-Viterbi-Decoder\HDL Files\Convolutional_Encoder.vhd
+Z34 8C:\Users\nanae\iCloudDrive\MUN\Project\Project Codes\Convolutional-Encoder-Viterbi-Decoder\HDL Files\Convolutional_Encoder.vhd
+Z35 FC:\Users\nanae\iCloudDrive\MUN\Project\Project Codes\Convolutional-Encoder-Viterbi-Decoder\HDL Files\Convolutional_Encoder.vhd
 l0
 L7
 V_<3R09U<WAzXYk<oXGl=;3
 !s100 ADMI;j<WoCf9CgieM6Xd10
 R9
 32
-R20
+Z36 !s110 1588344433
 !i10b 1
 R11
-Z26 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:\Users\nanae\iCloudDrive\MUN\Project\Project Codes\Convolutional-Encoder-Viterbi-Decoder\HDL Files\Convolutional_Encoder.vhd|
-Z27 !s107 C:\Users\nanae\iCloudDrive\MUN\Project\Project Codes\Convolutional-Encoder-Viterbi-Decoder\HDL Files\Convolutional_Encoder.vhd|
+Z37 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:\Users\nanae\iCloudDrive\MUN\Project\Project Codes\Convolutional-Encoder-Viterbi-Decoder\HDL Files\Convolutional_Encoder.vhd|
+Z38 !s107 C:\Users\nanae\iCloudDrive\MUN\Project\Project Codes\Convolutional-Encoder-Viterbi-Decoder\HDL Files\Convolutional_Encoder.vhd|
 !i113 1
 R14
 R15
@@ -138,41 +185,133 @@ VlKBz?QLhN:d_j:HmmYC_b0
 !s100 3So^RE5Q295XC8@L:NlEz2
 R9
 32
-R20
+R36
 !i10b 1
 R11
-R26
-R27
+R37
+R38
+!i113 1
+R14
+R15
+Eseven_segment
+Z39 w1588365130
+R17
+R18
+R3
+R2
+R4
+R19
+R20
+Z40 8C:/Users/Nana Essandoh/Desktop/My Workspace/Convolution-Encoder-and-Viterbi-Decoder/FPGA Prototype Design/Seven_Segment.vhd
+Z41 FC:/Users/Nana Essandoh/Desktop/My Workspace/Convolution-Encoder-and-Viterbi-Decoder/FPGA Prototype Design/Seven_Segment.vhd
+l0
+L8
+VdJa<c6YK03Sg5=InV=Def3
+!s100 l=YOTWl[feN8V5l@We=F70
+R23
+32
+R24
+!i10b 1
+R25
+Z42 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Nana Essandoh/Desktop/My Workspace/Convolution-Encoder-and-Viterbi-Decoder/FPGA Prototype Design/Seven_Segment.vhd|
+Z43 !s107 C:/Users/Nana Essandoh/Desktop/My Workspace/Convolution-Encoder-and-Viterbi-Decoder/FPGA Prototype Design/Seven_Segment.vhd|
+!i113 1
+R14
+R15
+Abehav
+R17
+R18
+R3
+R2
+R4
+R19
+DEx4 work 13 seven_segment 0 22 dJa<c6YK03Sg5=InV=Def3
+l19
+L18
+VM8o;[_em[<jSE2^R@0NFe1
+!s100 RL4P01^l;AP3f:a>AV8JG0
+R23
+32
+R24
+!i10b 1
+R25
+R42
+R43
+!i113 1
+R14
+R15
+Etencoder
+R28
+R18
+R2
+R3
+R4
+R19
+R20
+Z44 8C:/Users/Nana Essandoh/Desktop/My Workspace/Convolution-Encoder-and-Viterbi-Decoder/FPGA Prototype Design/Convolutional_Encoder.vhd
+Z45 FC:/Users/Nana Essandoh/Desktop/My Workspace/Convolution-Encoder-and-Viterbi-Decoder/FPGA Prototype Design/Convolutional_Encoder.vhd
+l0
+L7
+VUEl4326bRBJz:TlfMVYhM3
+!s100 ]3C@c14S[9K[ET>mcg>AL1
+R23
+32
+R24
+!i10b 1
+R25
+Z46 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Nana Essandoh/Desktop/My Workspace/Convolution-Encoder-and-Viterbi-Decoder/FPGA Prototype Design/Convolutional_Encoder.vhd|
+Z47 !s107 C:/Users/Nana Essandoh/Desktop/My Workspace/Convolution-Encoder-and-Viterbi-Decoder/FPGA Prototype Design/Convolutional_Encoder.vhd|
+!i113 1
+R14
+R15
+Abehav
+R18
+R2
+R3
+R4
+R19
+DEx4 work 8 tencoder 0 22 UEl4326bRBJz:TlfMVYhM3
+l38
+L19
+VnRf25EU^X?23S^cP;8B1[3
+!s100 4TWHg`=<M6N?7gY@8Z0ZU0
+R23
+32
+R24
+!i10b 1
+R25
+R46
+R47
 !i113 1
 R14
 R15
 Etest_decoder
-Z28 w1588300264
-R17
+Z48 w1588300264
+Z49 DPx4 ieee 9 math_real 0 22 gNk<PdFJ<XNPcfef`f?Z81
 R1
 R2
 R3
 R4
 R5
 R6
-Z29 8C:/Users/nanae/iCloudDrive/MUN/Project/Project Codes/Convolutional-Encoder-Viterbi-Decoder/Testbench HDL/Test_Decoder.vhd
-Z30 FC:/Users/nanae/iCloudDrive/MUN/Project/Project Codes/Convolutional-Encoder-Viterbi-Decoder/Testbench HDL/Test_Decoder.vhd
+Z50 8C:/Users/nanae/iCloudDrive/MUN/Project/Project Codes/Convolutional-Encoder-Viterbi-Decoder/Testbench HDL/Test_Decoder.vhd
+Z51 FC:/Users/nanae/iCloudDrive/MUN/Project/Project Codes/Convolutional-Encoder-Viterbi-Decoder/Testbench HDL/Test_Decoder.vhd
 l0
 L9
 VlBo1^Wl;glZPa;ECkZc?h3
 !s100 Ldck=z?E`QSfFTOYkoM:X2
 R9
 32
-Z31 !s110 1588344435
+Z52 !s110 1588344435
 !i10b 1
-Z32 !s108 1588344434.000000
-Z33 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/nanae/iCloudDrive/MUN/Project/Project Codes/Convolutional-Encoder-Viterbi-Decoder/Testbench HDL/Test_Decoder.vhd|
-Z34 !s107 C:/Users/nanae/iCloudDrive/MUN/Project/Project Codes/Convolutional-Encoder-Viterbi-Decoder/Testbench HDL/Test_Decoder.vhd|
+Z53 !s108 1588344434.000000
+Z54 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/nanae/iCloudDrive/MUN/Project/Project Codes/Convolutional-Encoder-Viterbi-Decoder/Testbench HDL/Test_Decoder.vhd|
+Z55 !s107 C:/Users/nanae/iCloudDrive/MUN/Project/Project Codes/Convolutional-Encoder-Viterbi-Decoder/Testbench HDL/Test_Decoder.vhd|
 !i113 1
 R14
 R15
 Abehav
-R17
+R49
 R1
 R2
 R3
@@ -185,41 +324,41 @@ VBIm?DiC^N3cMl>?o>WL0O0
 !s100 FXXOH<=naB^ka0oO]Q02F2
 R9
 32
-R31
+R52
 !i10b 1
-R32
-R33
-R34
+R53
+R54
+R55
 !i113 1
 R14
 R15
 Etest_encoder
-Z35 w1588299632
-R17
+Z56 w1588299632
+R49
 R1
 R2
 R3
 R4
 R5
 R6
-Z36 8C:/Users/nanae/iCloudDrive/MUN/Project/Project Codes/Convolutional-Encoder-Viterbi-Decoder/Testbench HDL/Test_Encoder.vhd
-Z37 FC:/Users/nanae/iCloudDrive/MUN/Project/Project Codes/Convolutional-Encoder-Viterbi-Decoder/Testbench HDL/Test_Encoder.vhd
+Z57 8C:/Users/nanae/iCloudDrive/MUN/Project/Project Codes/Convolutional-Encoder-Viterbi-Decoder/Testbench HDL/Test_Encoder.vhd
+Z58 FC:/Users/nanae/iCloudDrive/MUN/Project/Project Codes/Convolutional-Encoder-Viterbi-Decoder/Testbench HDL/Test_Encoder.vhd
 l0
 L9
 VemXzXBSzUJKMi:YkhMfmB1
 !s100 z4e@YADTVXK[65Hc1NiTP1
 R9
 32
-R31
+R52
 !i10b 1
-Z38 !s108 1588344435.000000
-Z39 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/nanae/iCloudDrive/MUN/Project/Project Codes/Convolutional-Encoder-Viterbi-Decoder/Testbench HDL/Test_Encoder.vhd|
-Z40 !s107 C:/Users/nanae/iCloudDrive/MUN/Project/Project Codes/Convolutional-Encoder-Viterbi-Decoder/Testbench HDL/Test_Encoder.vhd|
+Z59 !s108 1588344435.000000
+Z60 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/nanae/iCloudDrive/MUN/Project/Project Codes/Convolutional-Encoder-Viterbi-Decoder/Testbench HDL/Test_Encoder.vhd|
+Z61 !s107 C:/Users/nanae/iCloudDrive/MUN/Project/Project Codes/Convolutional-Encoder-Viterbi-Decoder/Testbench HDL/Test_Encoder.vhd|
 !i113 1
 R14
 R15
 Abehav
-R17
+R49
 R1
 R2
 R3
@@ -232,148 +371,148 @@ VeKGSWZCXa[nBcfKIcS=_k0
 !s100 DemEc9HVPn8g6WNBX@L=o2
 R9
 32
-R31
+R52
 !i10b 1
-R38
-R39
-R40
+R59
+R60
+R61
 !i113 1
 R14
 R15
 Etest_turbo
-Z41 w1588342922
-R17
+Z62 w1588342922
+R49
 R1
 R2
 R3
 R4
 R5
 R6
-Z42 8C:/Users/nanae/iCloudDrive/MUN/Project/Project Codes/Convolutional-Encoder-Viterbi-Decoder/Testbench HDL/Test_Top_Level.vhd
-Z43 FC:/Users/nanae/iCloudDrive/MUN/Project/Project Codes/Convolutional-Encoder-Viterbi-Decoder/Testbench HDL/Test_Top_Level.vhd
+Z63 8C:/Users/nanae/iCloudDrive/MUN/Project/Project Codes/Convolutional-Encoder-Viterbi-Decoder/Testbench HDL/Test_Top_Level.vhd
+Z64 FC:/Users/nanae/iCloudDrive/MUN/Project/Project Codes/Convolutional-Encoder-Viterbi-Decoder/Testbench HDL/Test_Top_Level.vhd
 l0
 L9
 VlI=5VGZ<6MlhRI=FjNh3O2
 !s100 AJ38W;PW`AJ_=jRA5ONnH0
 R9
 32
-R31
+R52
 !i10b 1
-R38
-Z44 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/nanae/iCloudDrive/MUN/Project/Project Codes/Convolutional-Encoder-Viterbi-Decoder/Testbench HDL/Test_Top_Level.vhd|
-Z45 !s107 C:/Users/nanae/iCloudDrive/MUN/Project/Project Codes/Convolutional-Encoder-Viterbi-Decoder/Testbench HDL/Test_Top_Level.vhd|
+R59
+Z65 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/nanae/iCloudDrive/MUN/Project/Project Codes/Convolutional-Encoder-Viterbi-Decoder/Testbench HDL/Test_Top_Level.vhd|
+Z66 !s107 C:/Users/nanae/iCloudDrive/MUN/Project/Project Codes/Convolutional-Encoder-Viterbi-Decoder/Testbench HDL/Test_Top_Level.vhd|
 !i113 1
 R14
 R15
 Abehav
-R17
+R49
 R1
 R2
 R3
 R4
 R5
-Z46 DEx4 work 10 test_turbo 0 22 lI=5VGZ<6MlhRI=FjNh3O2
+DEx4 work 10 test_turbo 0 22 lI=5VGZ<6MlhRI=FjNh3O2
 l46
 L14
-Z47 V7QCV=`k]O[MAN?DM1NY_D0
-Z48 !s100 UeRf:@Cef]]nNmVCNER_e0
+V7QCV=`k]O[MAN?DM1NY_D0
+!s100 UeRf:@Cef]]nNmVCNER_e0
 R9
 32
-R31
+R52
 !i10b 1
-R38
-R44
-R45
+R59
+R65
+R66
 !i113 1
 R14
 R15
 Eturbo
-Z49 w1583451996
-R1
+Z67 w1588365110
+R18
 R2
 R3
 R4
-R5
-R6
-R7
-R8
+R19
+R20
+Z68 8C:/Users/Nana Essandoh/Desktop/My Workspace/Convolution-Encoder-and-Viterbi-Decoder/FPGA Prototype Design/Top_Level_Convolutional.vhd
+Z69 FC:/Users/Nana Essandoh/Desktop/My Workspace/Convolution-Encoder-and-Viterbi-Decoder/FPGA Prototype Design/Top_Level_Convolutional.vhd
 l0
-L8
-VO5R:5OJgCNB61:fQnA>AF2
-!s100 lomUi4K1=f4_:T:z6jSch0
-R9
+L9
+Vcg8lUW>SIe2Xcj^_]bQ_P2
+!s100 iB2oQF_15CW=iL?:Y>d@l3
+R23
 32
-Z50 !s110 1588282190
+R24
 !i10b 1
-Z51 !s108 1588282190.000000
-R12
-R13
+R25
+Z70 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Nana Essandoh/Desktop/My Workspace/Convolution-Encoder-and-Viterbi-Decoder/FPGA Prototype Design/Top_Level_Convolutional.vhd|
+Z71 !s107 C:/Users/Nana Essandoh/Desktop/My Workspace/Convolution-Encoder-and-Viterbi-Decoder/FPGA Prototype Design/Top_Level_Convolutional.vhd|
 !i113 1
 R14
 R15
 Abehav
-R1
+R18
 R2
 R3
 R4
-R5
-DEx4 work 5 turbo 0 22 O5R:5OJgCNB61:fQnA>AF2
-l49
-L20
-V65madkC>S]LCW_geF4]mC1
-!s100 UKjMS1[GADoc=nijacB:[0
-R9
+R19
+DEx4 work 5 turbo 0 22 cg8lUW>SIe2Xcj^_]bQ_P2
+l97
+L25
+Vl>Dhf]=YOG>DS[:TebdRm2
+!s100 I<a7in?:E_`Zb=^ZkPWTf0
+R23
 32
-R50
+R24
 !i10b 1
-R51
-R12
-R13
+R25
+R70
+R71
 !i113 1
 R14
 R15
 Eviterbidecoder
-Z52 w1588286110
-R1
+Z72 w1588364966
+R18
 R2
 R3
 R4
-R5
-R6
-Z53 8C:/Users/nanae/iCloudDrive/MUN/Project/Project Codes/Convolutional-Encoder-Viterbi-Decoder/HDL Files/Viterbi_Decoder.vhd
-Z54 FC:/Users/nanae/iCloudDrive/MUN/Project/Project Codes/Convolutional-Encoder-Viterbi-Decoder/HDL Files/Viterbi_Decoder.vhd
+R19
+R20
+Z73 8C:/Users/Nana Essandoh/Desktop/My Workspace/Convolution-Encoder-and-Viterbi-Decoder/FPGA Prototype Design/ViterbiDecoder.vhd
+Z74 FC:/Users/Nana Essandoh/Desktop/My Workspace/Convolution-Encoder-and-Viterbi-Decoder/FPGA Prototype Design/ViterbiDecoder.vhd
 l0
 L12
-V[33Feh?dF<<Pmo9DQ<^:43
-!s100 C4@bOAGYm^iK`<hjM2nlE3
-R9
+VmfzDdP5lMz<WVN6V4TT<?1
+!s100 ^:W>7^UU5K0ZH50;n3;<_3
+R23
 32
-R10
+R24
 !i10b 1
-R32
-Z55 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/nanae/iCloudDrive/MUN/Project/Project Codes/Convolutional-Encoder-Viterbi-Decoder/HDL Files/Viterbi_Decoder.vhd|
-Z56 !s107 C:/Users/nanae/iCloudDrive/MUN/Project/Project Codes/Convolutional-Encoder-Viterbi-Decoder/HDL Files/Viterbi_Decoder.vhd|
+R25
+Z75 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Nana Essandoh/Desktop/My Workspace/Convolution-Encoder-and-Viterbi-Decoder/FPGA Prototype Design/ViterbiDecoder.vhd|
+Z76 !s107 C:/Users/Nana Essandoh/Desktop/My Workspace/Convolution-Encoder-and-Viterbi-Decoder/FPGA Prototype Design/ViterbiDecoder.vhd|
 !i113 1
 R14
 R15
 Abehav
-R1
+R18
 R2
 R3
 R4
-R5
-DEx4 work 14 viterbidecoder 0 22 [33Feh?dF<<Pmo9DQ<^:43
-l93
+R19
+DEx4 work 14 viterbidecoder 0 22 mfzDdP5lMz<WVN6V4TT<?1
+l94
 L25
-VDEEnHGQg<L@^Uh3J[kIl42
-!s100 E6]46U1IDMUS;Gb;l7Lah2
-R9
+Vn2DiccVaN8=mVgogT9b901
+!s100 Y=XXf1zS<zbBZUge6nknM1
+R23
 32
-R10
+R24
 !i10b 1
-R32
-R55
-R56
+R25
+R75
+R76
 !i113 1
 R14
 R15

@@ -1,4 +1,3 @@
--- Top Level Convolutional Encoder and Viterbi Decoder
 LIBRARY IEEE;
 USE IEEE.std_logic_1164.ALL;
 USE IEEE.std_logic_arith.ALL;
@@ -113,8 +112,8 @@ BEGIN
 	SecH_4 : Seven_Segment port map ("1101", HEX4);
 	SecH_5 : Seven_Segment port map (Input, HEX5);
 	Seconds: Count3S port map(CLOCK_50,L1,L2,L3,Second);
-   	CE1:TEncoder port map(Second,KEY(3),SW(9),CE1_Out);
-   	CE2:ViterbiDecoder port map(Second,CE1_Out,VD_Out);
+   CE1:TEncoder port map(Second,KEY(3),SW(9),CE1_Out);
+   CE2:ViterbiDecoder port map(Second,CE1_Out,VD_Out);
 
 
 	LEDR(9) <= SW(9);

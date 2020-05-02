@@ -1,8 +1,3 @@
--- Portions of this Code were adapted from the Viterbi Decoder design by:( See Below)
---	Mustafa Ozcelikors thewebblog.net | github.com/mozcelikors | <mozcelikors@gmail.com>
---	Hassan Qayyum
---	Umair Saleem
-
 LIBRARY IEEE;
 USE IEEE.std_logic_1164.ALL;
 USE IEEE.std_logic_arith.ALL;
