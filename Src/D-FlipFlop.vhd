@@ -13,7 +13,7 @@ ENTITY DFlipFlop IS
 
 	-- Interface I/O
 	 D : IN std_logic;
-         Q : OUT std_logic
+     Q : OUT std_logic
 );
 END DFlipFlop;
 
@@ -25,7 +25,7 @@ ARCHITECTURE behav OF DFlipFlop IS
 		BEGIN
 		IF ( rstb /= '1') THEN
 		Q <= 'U';
-		ELSIF (clk'event) and (clk='1') THEN -- Positive Edge
+		ELSIF (clk'EVENT) and (clk='1') THEN -- Positive Edge
 		Q <= D;
             	END IF;
 	END PROCESS;

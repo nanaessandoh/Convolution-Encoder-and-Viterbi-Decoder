@@ -12,50 +12,50 @@ USE IEEE.numeric_std.ALL;
 ENTITY ViterbiDecoder IS
 PORT (
 	-- Clock
-	clk: in std_logic;
+	clk: IN std_logic;
 
 	-- Input Interface
-	input: in std_logic_vector (1 downto 0);
+	input: IN std_logic_vector (1 DOWNTO 0);
 
 	-- Output Interface 
-	output: out std_logic);
+	output: OUT std_logic);
 
 END ViterbiDecoder;
 
 ARCHITECTURE behav OF ViterbiDecoder IS
-type word_2 is array (1 downto 0) of std_logic_vector (1 downto 0);
-type word_4_NextState is array (3 downto 0) of std_logic_vector (1 downto 0);
-type word_3 is array (2 downto 0) of std_logic_vector (1 downto 0); 
-type word_3_bit is array (2 downto 0) of std_logic; 
-type word_4 is array (3 downto 0) of integer;
-type word_4_bit is array (3 downto 0) of std_logic;
-type memory_4 is array (3 downto 0) of word_2;
-type memory_4_bit is array (3 downto 0) of word_4_bit;
-type memory_4_NextState is array (3 downto 0) of word_4_NextState;
-type memory_8 is array (7 downto 0) of integer;
-type memory_traceback_row is array (7 downto 0) of word_3;
-type memory_traceback_table is array (3 downto 0) of memory_traceback_row;
+TYPE word_2 IS ARRAY (1 DOWNTO 0) of std_logic_vector (1 DOWNTO 0);
+TYPE word_4_NextState IS ARRAY (3 DOWNTO 0) of std_logic_vector (1 DOWNTO 0);
+TYPE word_3 IS ARRAY (2 DOWNTO 0) of std_logic_vector (1 DOWNTO 0); 
+TYPE word_3_bit IS ARRAY (2 DOWNTO 0) of std_logic; 
+TYPE word_4 IS ARRAY (3 DOWNTO 0) of integer;
+TYPE word_4_bit IS ARRAY (3 DOWNTO 0) of std_logic;
+TYPE memory_4 IS ARRAY (3 DOWNTO 0) of word_2;
+TYPE memory_4_bit IS ARRAY (3 DOWNTO 0) of word_4_bit;
+TYPE memory_4_NextState IS ARRAY (3 DOWNTO 0) of word_4_NextState;
+TYPE memory_8 IS ARRAY (7 DOWNTO 0) of integer;
+TYPE memory_traceback_row IS ARRAY (7 DOWNTO 0) of word_3;
+TYPE memory_traceback_table IS ARRAY (3 DOWNTO 0) of memory_traceback_row;
 
 -- Traceback Depth is 3 
 -- All 32 paths have been hardcoded
 -- The 4 traceback tables each containing 8 possible paths depending on the initial state
 
-constant traceback_table: memory_traceback_table := ((("00","00","00"),("11","10","11"),("00","11","10"),("11","01","01"),("00","00","11"),("11","10","00"),("00","11","01"),("11","01","10")),
+CONSTANT traceback_table: memory_traceback_table := ((("00","00","00"),("11","10","11"),("00","11","10"),("11","01","01"),("00","00","11"),("11","10","00"),("00","11","01"),("11","01","10")),
                                                     (("11","00","00"),("00","10","11"),("11","11","10"),("00","01","01"),("11","00","11"),("00","10","00"),("11","11","01"),("00","01","10")),
                                                     (("10","11","00"),("01","01","11"),("10","00","10"),("01","10","01"),("10","11","11"),("01","01","00"),("10","00","01"),("01","10","10")),
                                                     (("01","11","00"),("10","01","11"),("01","00","10"),("10","10","01"),("01","11","11"),("10","01","00"),("01","00","01"),("10","10","10")));
 
 -- Next table maps the state transitions to the inputs (Current State Vs. output)
-constant outputTable:memory_4_bit := (('0','0','0','1'),('1','0','0','0'),('0','1','0','0'),('0','0','1','0'));
+CONSTANT outputTable:memory_4_bit := (('0','0','0','1'),('1','0','0','0'),('0','1','0','0'),('0','0','1','0'));
 
 -- Next table gets the next state providing the current state and the state transition
-constant nextStateTable:memory_4_NextState:=(("00","00","00","10"),("10","00","00","00"),("00","11","01","00"),("00","01","11","00"));
+CONSTANT nextStateTable:memory_4_NextState:=(("00","00","00","10"),("10","00","00","00"),("00","11","01","00"),("00","01","11","00"));
 
 
-constant TraceBackDepth: positive := 3;
+CONSTANT TraceBackDepth: positive := 3;
 
 
-FUNCTION hammingDistance(load :std_logic_vector (1 downto 0)) RETURN integer IS
+FUNCTION hammingDistance(load :std_logic_vector (1 DOWNTO 0)) RETURN integer IS
 BEGIN
   
   CASE load IS
@@ -72,7 +72,7 @@ BEGIN
  END CASE; 
 END hammingDistance; 
 
-FUNCTION conv_int( load :std_logic_vector (1 downto 0)) RETURN integer IS
+FUNCTION conv_int( load :std_logic_vector (1 DOWNTO 0)) RETURN integer IS
 BEGIN
   
   CASE load IS
@@ -93,16 +93,16 @@ END conv_int;
 BEGIN  
 
   PROCESS(clk) 
-   variable InitialState:std_logic_vector (1 downto 0):="00";
+   variable InitialState:std_logic_vector (1 DOWNTO 0):="00";
    variable TracebackResult:memory_8:=(0,0,0,0,0,0,0,0);
    variable InputLevel:integer:=0;
    variable i:integer:=0;
    variable chosenPathIndex:integer;
    variable lowestPathMetricError:integer:=6; --Initialized to the maximum possible error
-   variable currentState:std_logic_vector (1 downto 0);
+   variable currentState:std_logic_vector (1 DOWNTO 0);
    variable outputVector:word_3_bit;
    
-   variable temp_output:std_logic_vector (1 downto 0);
+   variable temp_output:std_logic_vector (1 DOWNTO 0);
    BEGIN
             IF (clk'event) and (clk='1') and (input/= "UU")  THEN -- Positive Edge
                i := 0;

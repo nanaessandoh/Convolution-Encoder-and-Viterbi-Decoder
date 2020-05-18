@@ -24,7 +24,7 @@ END Convolutional;
 
 ARCHITECTURE behav OF Convolutional IS 
 
-SIGNAL CE1_Out:std_logic_vector(1 downto 0);
+SIGNAL CE1_Out:std_logic_vector(1 DOWNTO 0);
 
 COMPONENT Encoder
 PORT(
@@ -36,7 +36,7 @@ PORT(
 	isop : IN std_logic;
 	ivalid: IN std_logic;
 	input : IN std_logic;
-        output :OUT std_logic_vector (1 downto 0)
+        output :OUT std_logic_vector (1 DOWNTO 0)
 
          );
 END COMPONENT; 
@@ -48,8 +48,8 @@ PORT (
 	clk: in std_logic;
 
 	-- Interface I/O
-	input: in std_logic_vector (1 downto 0);
-	output: out std_logic);
+	input: IN std_logic_vector (1 DOWNTO 0);
+	output: OUT std_logic);
 
 END COMPONENT;
 
